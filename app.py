@@ -2,6 +2,9 @@ import streamlit as st
 import preprocessor,helper
 import matplotlib.pyplot as plt
 import seaborn as sns
+import topic_model
+
+
 
 st.sidebar.title("Whatsapp Chat Analyzer")
 
@@ -129,6 +132,15 @@ if uploaded_file is not None:
             ax.pie(emoji_df['Count'].head(), labels=emoji_df['Emoji'].head(), autopct="%0.2f")
 
             st.pyplot(fig)
+
+           # if st.sidebar.button("topic"):
+            #    topics = topic_model.topic_modeling(df)
+             #   st.write("Chat Topics:")
+              #  for topic, words in topics.items():
+               #     st.write(f"{topic}: {', '.join(words)}")
+
+
+
 
 
 
